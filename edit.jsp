@@ -11,14 +11,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<center>
-		<h1 style="color: orange;">Edit & update the record.</h1>
-	</center>
-
+	<center><h1 style="color: orange;">Edit & update the record.</h1></center>
 	<%
 	String student_id = request.getParameter("student_id");
 	int Student_id = Integer.parseInt(student_id);
-
 	StudentModel StudentModel = StudentDao.getStudentById(Student_id);
 	%>
 
@@ -26,56 +22,38 @@
 		<form action="EditServlet" method="post">
 			<input type="hidden" name="student_id" required="required"
 				value=" <%=StudentModel.getStudent_id()%>" />
-			</td>
-
 			<table border="1" cellpadding="5">
-				<tr>
-					<td>Student First Name:</td>
+				<tr><td>Student First Name:</td>
 					<td><input type="text" name="firstName" required="required"
-						value=" <%=StudentModel.getFirstName()%>" /></td>
-				</tr>
-				<tr>
-					<td>Student Middle Name:</td>
+						value=" <%=StudentModel.getFirstName()%>" /></td></tr>
+				
+				<tr><td>Student Middle Name:</td>
 					<td><input type="text" name="middleName" required="required"
-						value="<%=StudentModel.getMiddleName()%>" /></td>
-				</tr>
-				<tr>
-					<td>Student Last Name:</td>
+						value="<%=StudentModel.getMiddleName()%>" /></td></tr>
+				
+				<tr><td>Student Last Name:</td>
 					<td><input type="text" name="lastName" required="required"
-						value="<%=StudentModel.getLastName()%>" /></td>
-				</tr>
-				<tr>
-					<td>Branch:</td>
+						value="<%=StudentModel.getLastName()%>" /></td></tr>
+				
+				<tr><td>Branch:</td>
 					<td><input type="text" name="branch"
-						value="<%=StudentModel.getBranch()%>"></td>
-				</tr>
-
-				<tr>
-					<td>Maths:</td>
+						value="<%=StudentModel.getBranch()%>"></td></tr>
+				
+				<tr><td>Maths:</td>
 					<td><input type="text" name="maths"
-						value="<%=StudentModel.getMaths()%>"></td>
-				</tr>
+						value="<%=StudentModel.getMaths()%>"></td></tr>
 
-				<tr>
-					<td>English:</td>
+				<tr><td>English:</td>
 					<td><input type="text" name="english"
-						value="<%=StudentModel.getEnglish()%>"></td>
-				</tr>
+						value="<%=StudentModel.getEnglish()%>"></td></tr>
 
-				<tr>
-					<td>Science:</td>
+				<tr><td>Science:</td>
 					<td><input type="text" name="science"
-						value="<%=StudentModel.getScience()%>"></td>
-				</tr>
+						value="<%=StudentModel.getScience()%>"></td></tr>
 
-				<tr>
-					<td colspan="2"><input type="Submit" value="Edit &amp; Save" /></td>
-				</tr>
-
+				<tr><td colspan="2"><input type="Submit" value="Edit &amp; Save" /></td></tr>
 			</table>
-
 		</form>
 	</div>
-
 </body>
 </html>
