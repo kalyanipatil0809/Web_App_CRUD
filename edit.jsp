@@ -24,7 +24,7 @@
 			<input type="hidden" name="student_id"
 				value="${studentModel.student_id}" />
 
-			<table border="1" cellpadding="5">
+			<table  border="1" cellpadding="8" style="background-color: rgba(150, 212, 212, 0.4)">
 				<tr>
 					<td>Student First Name:</td>
 					<td><input type="text" name="firstName" required="required"
@@ -63,7 +63,6 @@
 				<tr>
 					<td colspan="2" align="center" onclick="onEdit()"><input
 						type="submit" name="Action" value="Edit & Save"></td>
-					<!-- <td colspan="2" align="center" ><input type="submit" name="Action" value="Edit & Save"></td> -->
 				</tr>
 			</table>
 
