@@ -32,7 +32,6 @@ public class StudentDao {
 			preparedStatement.setInt(MATHS, studentModel.getMaths());
 			preparedStatement.setInt(ENGLISH, studentModel.getEnglish());
 			preparedStatement.setInt(SCIENCE, studentModel.getScience());
-
 		} catch (Exception exception) {
 			System.out.println("Message:" + exception.getMessage());
 		}
@@ -47,7 +46,6 @@ public class StudentDao {
 
 			commonData(preparedStatement, studentModel);
 			status = preparedStatement.executeUpdate();
-
 		} catch (Exception exception) {
 			System.out.println("Message:" + exception.getMessage());
 		} finally {
@@ -88,7 +86,6 @@ public class StudentDao {
 				}
 			}
 		}
-
 		if (status == 0) {
 			return false;
 		} else {
@@ -146,7 +143,6 @@ public class StudentDao {
 				}
 			}
 		}
-
 		return null;
 	}
 
