@@ -41,7 +41,7 @@ public class SaveServlet extends HttpServlet {
 		if (status) {
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("success.jsp");
 			requestDispatcher.include(request, response);
-		} else if(status==false){
+		} else if(!status){
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("recordAlreadyExist.jsp");
 			requestDispatcher.include(request, response);
 		} else{
