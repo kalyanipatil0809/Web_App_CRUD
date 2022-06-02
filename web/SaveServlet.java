@@ -41,11 +41,12 @@ public class SaveServlet extends HttpServlet {
 		if (status) {
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("success.jsp");
 			requestDispatcher.include(request, response);
-		} else {
+		} else if(status==false){
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("recordAlreadyExist.jsp");
 			requestDispatcher.include(request, response);
+		} else{
+			response.sendRedirect("error.jsp");
 		}
-
 		out.close();
 	}
 
